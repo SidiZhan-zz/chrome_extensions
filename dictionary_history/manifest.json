@@ -1,0 +1,27 @@
+{
+  "name": "collins dictionary tools",
+  "version": "1.0",
+  "description": "filter images from the web page + record and display historical vocabulary",
+  "browser_action" :
+  {
+    "default_icon" : "icon-19.png",
+    "default_title" : "collins dictionary tools",
+    "default_popup": "popup.html"
+  },
+  "permissions" : [
+    "activeTab",
+    "cookies",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+	{
+      "matches": ["https://www.collinsdictionary.com/dictionary/english/*"],
+      "js": ["filter.js"]
+    }
+  ],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "manifest_version": 2
+}
